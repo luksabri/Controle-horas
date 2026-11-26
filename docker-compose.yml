@@ -1,0 +1,12 @@
+services:
+  horas-extras:
+    build: .
+    container_name: controle-horas-extras
+    restart: unless-stopped
+    ports:
+      - "3080:3000"
+    environment:
+      - AUTH_USER=luciano
+      - AUTH_PASS=784512
+    volumes:
+      - ./data:/app/data
